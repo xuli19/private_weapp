@@ -1,0 +1,17 @@
+<style>
+
+</style>
+
+<template>
+  <view class="container">
+    我的页面
+  </view>
+  <view>
+    welcome to swpu campus,enjoy your life there!
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  export default class User extends wepy.page {}
+</script>
