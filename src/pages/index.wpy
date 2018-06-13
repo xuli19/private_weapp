@@ -5,8 +5,11 @@
       <view class="weui-panel__bd">
         <repeat for="{{ topics }}" key="id" index="index" item="topic">
           <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <!-- <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
               <image class="weui-media-box__thumb" src="https://lccdn.phphub.org/uploads/avatars/15206_1492399579.jpeg?imageView2/1/w/200/h/200" />
+            </view> -->
+            <view class='icon-box'>
+              <icon type='success' size='81'>
             </view>
             <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
               <view class="weui-media-box__title">{{ topic.title }}</view>
