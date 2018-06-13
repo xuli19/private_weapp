@@ -1,16 +1,47 @@
 <template>
-  <view class='container'>
-    首页话题列表
-    <ul>
-      <li>3</li>
-      <li>3</li>
-    </ul>
-
+  <view class="page__bd">
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__hd">话题列表</view>
+      <view class="weui-panel__bd">
+        <repeat for="{{ topics }}" key="id" index="index" item="topic">
+          <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+              <image class="weui-media-box__thumb" src="https://lccdn.phphub.org/uploads/avatars/15206_1492399579.jpeg?imageView2/1/w/200/h/200" />
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+              <view class="weui-media-box__title">{{ topic.title }}</view>
+              <view class="weui-media-box__desc">{{ topic.body }}</view>
+            </view>
+          </navigator>
+        </repeat>
+      </view>
+    </view>
   </view>
 </template>
 
 <script>
   import wepy from 'wepy'
 
-  export default class Index extends wepy.page {}
+  export default class Index extends wepy.page {
+    // 可用于页面模板绑定的数据
+    data = {
+      topics: [{
+        id: 1,
+        title: '测试1',
+        body: '话题1'
+      }, {
+        id: 2,
+        title: '测试2',
+        body: '话题2'
+      }, {
+        id: 3,
+        title: '测试3',
+        body: '话题3'
+      }, {
+        id: 4,
+        title: '测试4',
+        body: '话题4'
+      }]
+    }
+  }
 </script>
