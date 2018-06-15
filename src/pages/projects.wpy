@@ -1,88 +1,122 @@
 <style>
-
-.head{
-  text-align: center;
-  padding-top: 20rpx;
-  font-size: 40rpx;
-}
-.tr1 {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: center;
-  height: 20rpx;
-  padding-top: 80rpx;
-  align-items: center;
-  margin-bottom: 50rpx;
-}
-.th{
-  padding: 10rpx 10rpx;
-}
-
-
-.table {
-  border: 0px solid darkgray;
-}
-.tr3{
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  height: 8rem;
-  align-items: center;
-}
-.tr2{
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  height: 8rem;
-  align-items: center;
-    background: #E6F3F9;
-}
-.info{
- display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: center;
-
-}
-.td-info{
-  width:25%;
-  padding: 10rpx 10rpx;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-
-}
-.th {
-  width: 40%;
-  justify-content: center;
-  background: #87CEEB;
-  color: #fff;
-  display: flex;
-  height: 3rem;
-  align-items: center;
-  text-align: center;
-}
+  .head {
+    text-align: center;
+    padding-top: 20rpx;
+    font-size: 40rpx;
+  }
+  .tr1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    height: 20rpx;
+    padding-top: 80rpx;
+    align-items: center;
+    margin-bottom: 50rpx;
+  }
+  .th {
+    padding: 5rpx 5rpx;
+  }
+  .table {
+    border: 0px solid darkgray;
+  }
+  .tr3 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 8rem;
+    align-items: center;
+  }
+  .tr2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 5rem;
+    align-items: center;
+    background: #f1fcff;
+  }
+  .info {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  .td-info {
+    width: 25%;
+    padding: 5rpx 5rpx;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+  }
+  .th {
+    width: 40%;
+    justify-content: center;
+    background: #87CEEB;
+    color: #fff;
+    display: flex;
+    height: 3rem;
+    align-items: center;
+    text-align: center;
+  }
 </style>
+
 <template>
-  <view>
-  <view class="head">开放实验项目信息</view>
-  <view class="tr1">
-    <view class="th">序号</view>
-    <view class="th">实验名称</view>
-    <view class="th">实验类型</view>
-    <view class="th">实验级别</view>
-    <view class="th">指导教师</view>
-    <view class="th">结题时间</view>
-  </view>
-  <view class="tr2" wx:for="{{languages}}" wx:for-item="language" wx:key="id">
-    <view class="info">
-      <view class='td-info'> {{language.id}} </view>
-      <view class="td-info"> {{language.name}} </view>
-      <view class="td-info"> {{language.leixin}} </view>
-      <view class="td-info"> {{language.jibie}} </view>
-      <view class="td-info"> {{language.teacher}} </view>
-      <view class="td-info"> {{language.time}} </view>
+  <view class="page">
+    <view class="head">开放实验项目信息</view>
+    <view class="tr1">
+      <view class="th">项目编号</view>
+      <view class="th">项目名称</view>
+      <view class="th">归属实验室</view>
+      <view class="th">项目进展</view>
+      <view class="th">指导教师</view>
+    </view>
+    <view class="tr2" wx:for="{{languages}}" wx:for-item="language" wx:key="id">
+      <view class="info">
+        <view class='td-info'> {{language.id}} </view>
+        <view class="td-info"> {{language.name}} </view>
+        <view class="td-info"> {{language.leixin}} </view>
+        <view class="td-info"> {{language.jibie}} </view>
+        <view class="td-info"> {{language.teacher}} </view>
+      </view>
     </view>
   </view>
 </template>
+
+<script>
+  import wepy from 'wepy'
+  export default class Index extends wepy.page {
+    data = {
+      languages: [{
+        id: 1,
+        name: '基于数据中心业务日志采集系统设计与实现',
+        leixin: ' 实验',
+        jibie: '普通',
+        teacher: ' 汪立欣 ',
+        time: '18-6-15 '
+      }, {
+        id: 2,
+        name: '基于网信中心业务日志采集系统设计与实现',
+        leixin: ' 研究',
+        jibie: '普通',
+        teacher: ' 贾存科 ',
+        time: '18-6-15 '
+      }, {
+        id: 3,
+        name: 'fefe',
+        leixin: ' fefe',
+        jibie: 'keshi',
+        teacher: ' 王平 ',
+        time: '18-6-15 '
+      }, {
+        id: 4,
+        name: 'fefe',
+        leixin: ' fefe',
+        jibie: 'keshi',
+        teacher: ' 刘科 ',
+        time: '18-6-15 '
+      }]
+    }
+  }
+</script>

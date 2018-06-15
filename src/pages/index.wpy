@@ -5,9 +5,6 @@
       <view class="weui-panel__bd">
         <repeat for="{{ topics }}" key="id" index="index" item="topic">
           <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-            <!-- <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-              <image class="weui-media-box__thumb" src="https://lccdn.phphub.org/uploads/avatars/15206_1492399579.jpeg?imageView2/1/w/200/h/200" />
-            </view> -->
             <view class='icon-box'>
               <icon type='success' size='50'>
             </view>
@@ -18,13 +15,26 @@
           </navigator>
         </repeat>
       </view>
+      <view class="weui-panel__hd">通知公告</view>
+      <view class="weui-panel__bd">
+        <repeat for="{{ notices }}" key="id" index="index" item="notice">
+          <navigator url="notice" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+            <view class='icon-box'>
+              <icon type='info' size='50'>
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+              <view class="weui-media-box__title">{{ notice.title }}</view>
+              <view class="weui-media-box__desc">{{ notice.body }}</view>
+            </view>
+          </navigator>
+        </repeat>
+      </view>
     </view>
   </view>
 </template>
 
 <script>
   import wepy from 'wepy'
-
   export default class Index extends wepy.page {
     // 可用于页面模板绑定的数据
     data = {
@@ -44,6 +54,11 @@
         id: 4,
         title: '新闻专题4',
         body: '新闻内容4'
+      }],
+      notices: [{
+        id: 1,
+        title: '公告1',
+        body: '公告内容1'
       }]
     }
   }

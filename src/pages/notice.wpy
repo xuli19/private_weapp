@@ -1,0 +1,10 @@
+<template>
+  <view class="page">
+    <view class="weui-panel__hd">公告1</view>
+    what is your name?
+  </view>
+</template>
+<script>
+  import wepy from 'wepy'
+  export default class User extends wepy.page {}
+</script>
