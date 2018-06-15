@@ -38,7 +38,8 @@ export default class extends wepy.app {
   config = {
     pages: [
       'pages/index',
-      'pages/user'
+      'pages/user',
+      'pages/projects'
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -52,6 +53,11 @@ export default class extends wepy.app {
         text: '首页',
         iconPath: 'images/other.png',
         selectedIconPath: 'images/sother.png'
+      }, {
+        pagePath: 'pages/projects',
+        text: '开发实验项目',
+        iconPath: 'images/project.png',
+        selectedIconPath: 'images/sproject.png'
       }, {
         pagePath: 'pages/user',
         text: '快速报修',

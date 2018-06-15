@@ -1,7 +1,7 @@
 <template>
   <view class="page__bd">
     <view class="weui-panel weui-panel_access">
-      <view class="weui-panel__hd">话题列表</view>
+      <view class="weui-panel__hd">新闻列表</view>
       <view class="weui-panel__bd">
         <repeat for="{{ topics }}" key="id" index="index" item="topic">
           <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
@@ -9,7 +9,7 @@
               <image class="weui-media-box__thumb" src="https://lccdn.phphub.org/uploads/avatars/15206_1492399579.jpeg?imageView2/1/w/200/h/200" />
             </view> -->
             <view class='icon-box'>
-              <icon type='success' size='81'>
+              <icon type='success' size='50'>
             </view>
             <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
               <view class="weui-media-box__title">{{ topic.title }}</view>
@@ -30,20 +30,20 @@
     data = {
       topics: [{
         id: 1,
-        title: '测试1',
-        body: '话题1'
+        title: '新闻专题1',
+        body: '新闻内容1'
       }, {
         id: 2,
-        title: '测试2',
-        body: '话题2'
+        title: '新闻专题2',
+        body: '新闻内容2'
       }, {
         id: 3,
-        title: '测试3',
-        body: '话题3'
+        title: '新闻专题3',
+        body: '新闻内容3'
       }, {
         id: 4,
-        title: '测试4',
-        body: '话题4'
+        title: '新闻专题4',
+        body: '新闻内容4'
       }]
     }
   }
