@@ -4,7 +4,7 @@
       <view class="weui-panel__hd">新闻列表</view>
       <view class="weui-panel__bd">
         <repeat for="{{ topics }}" key="id" index="index" item="topic">
-          <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+          <navigator url="news" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
             <view class='icon-box'>
               <icon type='success' size='50'>
             </view>

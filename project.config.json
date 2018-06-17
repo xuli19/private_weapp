@@ -11,6 +11,7 @@
 	"appid": "wx963ddc21d0b2a240",
 	"projectname": "private-weapp",
 	"miniprogramRoot": "./dist",
+	"libVersion": "2.1.0",
 	"condition": {
 		"search": {
 			"current": -1,
