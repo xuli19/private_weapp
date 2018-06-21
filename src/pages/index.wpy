@@ -9,7 +9,7 @@
     font-weight: bold;
     margin-left: 41%;
     margin-bottom: 5px;
-    color:black;
+    color: black;
   }
   .weather {
     display: flex;
@@ -29,7 +29,7 @@
         <image class="circle weather icon" src="../images/srain.png" />
         <view class="weather" wx:for="{{weathers}}" wx:key="*this" wx:for-item="cts">
           <view wx:for="{{cts}}" wx:key="*this" wx:for-item='ct'>
-             {{ct.loc}}{{ct.location}} {{ct.wind_dir}}{{ct.cond_txt}}
+            {{ct.loc}}{{ct.location}} {{ct.wind_dir}}{{ct.cond_txt}}
           </view>
         </view>
       </view>
