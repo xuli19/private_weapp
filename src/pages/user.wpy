@@ -1,7 +1,7 @@
 <template>
   <view class="page">
     <view class="page__hd" style="background-color:#33CCFF;">
-      <view class="page__title">快速报修</view>
+      <view class="page__title">快速反馈</view>
       <view class="page__desc">填写需要报修点的相关信息、您的联系方式，以便向你反馈处理状态</view>
     </view>
     <view class="page__bd">
@@ -15,11 +15,11 @@
         </view>
       </picker>
       <!-- 描述故障情况 -->
-      <view class="weui-cells__title">报修描述</view>
+      <view class="weui-cells__title">反馈描述</view>
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell">
           <view class="weui-cell__bd">
-            <textarea class="weui-textarea" placeholder="思学楼A201 计算机无声音" style="height: 3.3em" />
+            <textarea class="weui-textarea" placeholder="A201 计算机无声音" style="height: 3.3em" />
             <view class="weui-textarea-counter">0/200</view>
           </view>
         </view>
@@ -29,7 +29,7 @@
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell weui-cell_input">
           <view class="weui-cell__hd">
-            <view class="weui-label">qq</view>
+            <view class="weui-label">QQ</view>
           </view>
           <view class="weui-cell__bd">
             <input class="weui-input" placeholder="请输入qq" />

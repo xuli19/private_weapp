@@ -1,0 +1,30 @@
+<template>
+  <view class="page__bd">
+    <view class="search-bar">
+      <input placeholder="请输入书名" bindinput="inputChange" />
+      <view>{{userInfo}}</view>
+      <button open-type='getUserInfo'>grgr</button>
+      <button type="primary" bindtap="getInfo">查詢</button>
+    </view>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  export default class Booklist extends wepy.page {
+    data = {
+      motto: 'hello,world',
+      userInfo: {}
+    };
+    methods = {
+      bindViewTap() {
+        console.log('Button clicked')
+      },
+      getInfo() {
+        wepy.login()
+        this.userInfo = wepy.getUserInfo()
+      }
+    };
+    onLoad() {}
+  }
+</script>

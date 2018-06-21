@@ -33,12 +33,14 @@
 
 <script>
   import wepy from 'wepy'
+  import 'wepy-async-function'
   export default class extends wepy.app {
     config = {
       pages: [
         'pages/index',
         'pages/user',
         'pages/projects',
+        'pages/booklist',
         'pages/notice',
         'pages/news'
       ],
@@ -60,6 +62,11 @@
           iconPath: 'images/project.png',
           selectedIconPath: 'images/sproject.png'
         }, {
+          pagePath: 'pages/booklist',
+          text: '书目查询',
+          iconPath: 'images/bluebook.png',
+          selectedIconPath: 'images/redbook.png'
+        }, {
           pagePath: 'pages/user',
           text: '快速报修',
           iconPath: 'images/mine.png',
@@ -72,6 +79,7 @@
     constructor() {
       super()
       this.use('requestfix')
+      this.use('promisify')
     }
     onLaunch() {}
     globalData = {
