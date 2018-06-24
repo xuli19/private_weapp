@@ -9,13 +9,17 @@
   .fontSet {
     font-weight: bold;
     font-size: 16px;
-    color: cornflowerblue;
+    color: black;
+  }
+  button {
+    background-color: #f57170;
   }
 </style>
 
 <template>
   <view class="page">
-    <view class="page__hd" style="background-color:#33CCFF;">
+    <!-- <view class="page__hd" style="background-color:#33CCFF;"> -->
+    <view class="page__hd" style="background-color:#15b7b9;">
       <view class="page__title">快速反馈</view>
       <view class="page__desc">填写需要报修点的相关信息、您的联系方式，以便向你反馈处理状态</view>
     </view>
@@ -34,7 +38,7 @@
         </div>
         <!-- 设备类型选择 -->
         <label class="weui-label left-distance">设备类型选择：</label>
-        <checkbox-group name="cb" style="padding-left:2rem;height:1.5rem">
+        <checkbox-group name="cb" style="padding-left:2rem;height:1.5rem;margin-bottom:10px;">
           <label class="padding-device"><checkbox value="Computer"/>计算机</label>
           <label class="padding-device"><checkbox value="Network"/>网络</label>
           <label class="padding-device"><checkbox value="Voice" />声音</label>
