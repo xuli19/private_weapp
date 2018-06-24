@@ -104,17 +104,17 @@
         time: '18-6-15 '
       }, {
         id: 3,
-        name: 'fefe',
-        leixin: ' fefe',
-        jibie: 'keshi',
-        teacher: ' 王平 ',
+        name: '基于微信小程序的实验室管理模式研究',
+        leixin: '科研',
+        jibie: '重点',
+        teacher: ' 李旭 ',
         time: '18-6-15 '
       }, {
         id: 4,
-        name: 'fefe',
-        leixin: ' fefe',
-        jibie: 'keshi',
-        teacher: ' 刘科 ',
+        name: '2017校园宣传片',
+        leixin: '实验',
+        jibie: '普通',
+        teacher: '余英龙',
         time: '18-6-15 '
       }]
     }

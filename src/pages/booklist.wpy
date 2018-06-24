@@ -25,6 +25,9 @@
         this.userInfo = wepy.getUserInfo()
       }
     };
-    onLoad() {}
+    onLoad() {
+      let sysInfo = wepy.getSystemInfoSync()
+      console.log(sysInfo)
+    }
   }
 </script>

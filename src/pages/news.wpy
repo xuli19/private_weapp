@@ -7,10 +7,6 @@
 </template>
 
 <script>
-import wepy from 'wepy'
-export default class News extends wepy.page {
-
-}
+  import wepy from 'wepy'
+  export default class News extends wepy.page {}
 </script>
-
-

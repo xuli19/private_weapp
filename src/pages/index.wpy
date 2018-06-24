@@ -25,7 +25,7 @@
     <view class="weui-panel weui-panel_access">
       <!-- 在当前也渲染实时天气数据 -->
       <view class="weui-panel__hd">
-        <view class="title">实时天气</view>
+        <view class="title">今日天气</view>
         <image class="circle weather icon" src="../images/srain.png" />
         <view class="weather" wx:for="{{weathers}}" wx:key="*this" wx:for-item="cts">
           <view wx:for="{{cts}}" wx:key="*this" wx:for-item='ct'>
@@ -78,14 +78,6 @@
         id: 2,
         title: '新闻专题2',
         body: '新闻内容2'
-      }, {
-        id: 3,
-        title: '新闻专题3',
-        body: '新闻内容3'
-      }, {
-        id: 4,
-        title: '新闻专题4',
-        body: '新闻内容4'
       }],
       notices: [{
         id: 1,
@@ -105,8 +97,12 @@
         url: 'https://free-api.heweather.com/s6/weather/now?location=成都&key=8c57c3471ae6476697af11fcec7b12c7',
         method: 'GET'
       })
-      this.weathers = response.data.HeWeather6
-      this.$apply()
+      if (response.statusCode === 200) {
+        this.weathers = response.data.HeWeather6
+        this.$apply()
+      } else {
+        console.log('发生错误')
+      }
     }
   }
 </script>
